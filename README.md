@@ -13,7 +13,6 @@ I requisiti tecnici sono i seguenti:
 <h1>Assunzioni</h1>
 Vengono qui riportate le assunzioni fatte durante lo svolgimento del progetto.
 
-- Ogni film è diretto da un solo regista
 - Un film, se particolarmente atteso, potrà essere riprodotto in più sale durante la sua programmazione
 - Se il punto precedente avviene, la data di inizio e la data di fine delle programmazioni nelle n sale devono coindicere
 - Non c'è nessun vincolo sul poter riproiettare uno stesso film in periodi differenti. Ciò significa che "Titanic" potrà essere nella programmazione di Gennaio (dal 1° al 14) e in quella di Marzo (dal 14 al 21)
