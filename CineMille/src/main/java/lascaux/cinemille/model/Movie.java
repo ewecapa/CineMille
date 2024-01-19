@@ -10,13 +10,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "film")
-public class Film {
+@Table(name = "movie")
+public class Movie {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "film_id", updatable = false, nullable = false)
-    private UUID filmId;
+	@Column(name = "movie_id", updatable = false, nullable = false)
+    private UUID movieId;
 	
 	@Column(name = "title", updatable = true, nullable = false)
     private String title;
@@ -24,10 +24,10 @@ public class Film {
 	@Column(name = "synopsis", updatable = true, nullable = true)
     private String synopsis;
 	
-	@Column(name = "releaseDate", updatable = true, nullable = false)
+	@Column(name = "release_date", updatable = true, nullable = false)
     private LocalDate releaseDate;
 	
-	@Column(name = "runningTime", updatable = true, nullable = false)
+	@Column(name = "running_time", updatable = true, nullable = false)
     private int runningTime;
 	
 	@Column(name = "director_id", updatable = true, nullable = false)
