@@ -13,9 +13,9 @@ I requisiti tecnici sono i seguenti:
 <h1>Assunzioni</h1>
 Vengono qui riportate le assunzioni fatte durante lo svolgimento del progetto.
 
-- Un film, se particolarmente atteso, potrà essere riprodotto in più sale durante la sua programmazione
-- Se il punto precedente avviene, la data di inizio e la data di fine delle programmazioni nelle n sale devono coindicere
-- Non c'è nessun vincolo sul poter riproiettare uno stesso film in periodi differenti. Ciò significa che "Titanic" potrà essere nella programmazione di Gennaio (dal 1° al 14) e in quella di Marzo (dal 14 al 21)
-- A seguito del punto precedente si intende che un film non può essere proiettato per più di 3 settimane filate. Se questo limite venisse superato in sessioni diverse, non sarebbe considerato un problema
-- La data di uscita di un film non deve necessariamente coincidere con l'inizio della sua programmazione. Se è la seconda volta che viene proiettato, queste due date non coincideranno.
+- Assumiamo che se un film, se particolarmente atteso, potrà essere riprodotto in più sale durante la sua programmazione. In questo scenario la data di inizio fine programmazioni nelle n sale devono coindicere
+- Assumiamo che non si possa riproiettare uno stesso film in periodi differenti. Dunque l'inizio proiezione dovrà SEMPRE coincidere con la data di uscita.
+- Assumiamo che non tutte le sale devono avere un film in proiezione durante lo stesso periodo. Questo significa che in un periodo x è possibile che ci sia un film proiettato anche in una sola sala, lasciando tutte le altre vuote
+- Assumiamo che il DB sia stato popolato a titolo esempificativo. Sono presenti imprecisioni, a titolo d'esempio il genere di un film o le proiezioni durante l'orario notturno
+  
   
