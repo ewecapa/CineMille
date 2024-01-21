@@ -1,5 +1,6 @@
 package lascaux.cinemille.model;
 
+
 import java.time.LocalDate;
 import java.util.UUID;
 import jakarta.persistence.Column;
