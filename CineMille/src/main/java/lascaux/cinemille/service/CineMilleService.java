@@ -153,7 +153,7 @@ public class CineMilleService {
 				if(!payload.getName().isBlank() && !payload.getSurname().isBlank()) {
 					if(this.cmRepository.existsDirectorByInfo(payload.getName(),payload.getSurname(),payload.getBirthday())){
 						this.log.forward("ERROR", "End: Director already exists", "");
-						Error error = new Error(HttpStatus.BAD_REQUEST, ErrorType.BSN, request, "Genre already exists", payload.getName() + " already exists");
+						Error error = new Error(HttpStatus.BAD_REQUEST, ErrorType.BSN, request, "Director already exists", payload.getName() + " already exists");
 						throw new BusinessException(error);
 					}
 				}
@@ -330,13 +330,13 @@ public class CineMilleService {
 	private void isManager(HttpServletRequest request, String actor) {
 
 		try {
-			this.log.forward("ERROR", "Start: Check if the header 'actor is a well formed email", actor);
+			this.log.forward("DEBUG", "Start: Check if the header 'actor is a well formed email", actor);
 			if(!Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$").matcher(actor).matches()) {
 				this.log.forward("ERROR", "End: The header 'actor' has to be a well formed email", actor);
 				Error error = new Error(HttpStatus.BAD_REQUEST, ErrorType.BSN, request, "Bad 'actor' header", actor + " isn't a well formed email");
 				throw new BusinessException(error);
 			}
-			this.log.forward("ERROR", "End: The header 'actor' is a well formed email", actor);
+			this.log.forward("DEBUG", "End: The header 'actor' is a well formed email", actor);
 			
 			this.log.forward("DEBUG", "Start: Check if user is a manager", actor);
 
@@ -363,7 +363,7 @@ public class CineMilleService {
 	 * 
 	 * @param originalPaylod is the payload to be transformed, directly retrieved by SQL query
 	 */
-	private static List<JSONObject> transformPayload(List<JSONObject> originalPayload) {
+	private List<JSONObject> transformPayload(List<JSONObject> originalPayload) {
         // Resulting list to store the transformed payload
         List<JSONObject> transformedPayload = new ArrayList<>();
 
