@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
+import lombok.Value; 
 
 @Builder
 @Getter
