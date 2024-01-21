@@ -1,7 +1,6 @@
 package lascaux.cinemille.model.dto;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
