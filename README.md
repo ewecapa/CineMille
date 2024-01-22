@@ -38,10 +38,7 @@ Questo progetto rappresenta un ideale cinema la cui necessità è quella di gest
   - Un film sia proiettato almeno per 7 giorni
 
 <h1>Microservizio</h1>
-<p>Per lo sviluppo del codice si è optato per un applicativo SpringBoot come indicato dalle specifiche del progetto. Per evitare l'effetto wall of text, verrà data una descrizione breve di cosa fa il microservizio e di come lo fa. Verranno completamente ignorate le classi nei packages model(.dto) e exception e. Verranno inoltre descritti solo i due metodi che sono effettivamente richiesti dal progetto, gli altri verranno eventualmente spiegati a voce</p>
-
-- getMovies(): Un metodo accessorio, volto al semplice ottenimento delle informazioni sui vari film, indipendentemente dalle loro programmazioni e conseguenti proiezioni. Prende in input un header chiamato actor che rappresenta la mail dell'utente richiedente, servirà a controllare se è un manager o meno ad aver fatto la richiesta. Se non è un manager verrà risposto errore, dato che si sta accedendo a potenziali dati sensibili a cui un normale cliente non dovrebbe accedere.
-Una volta chiamato l'endpoint con il metodo GET, il controller chiama il service che, come Branduardi ci insegna, chiama il repository per eseguire una query SQL e recuperare i dati che ci interessano. Questi dati restituiti al service vengono impacchettati in un JSONObject dotato di un messaggio informativo, per poi venire consegnati al controller che dopo averlo wrappato in uan ResponseEntity, lo restituisce al client.
+<p>Per lo sviluppo del codice si è optato per un applicativo SpringBoot come indicato dalle specifiche del progetto. Per evitare l'effetto wall of text, verrà data una descrizione breve di cosa fa il microservizio e di come lo fa. Verranno completamente ignorate le classi nei packages model(.dto) e exception e. Verranno inoltre descritti solo i due metodi che sono effettivamente richiesti dal progetto, gli altri verranno eventualmente spiegati a voce.</p>
 
 - getWeekProjections(): Un metodo che prende in input due valori:
   - actor: Come il metodo, è un header rappresenta la mail dell'utente richiedente, è obbligatorio in quanto sulla base del suo essere o meno manager verrà permesso il controllare una programmazione di una settimana passata
